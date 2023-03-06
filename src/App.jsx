@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards/Cards.jsx";
-import Nav from "./components/Nav.jsx";
+import Nav from "./components/Nav/Nav";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -25,9 +25,8 @@ function App() {
   return (
     <div className="App BackgroundImage">
       <Nav onSearch={onSearch} />
-      <div>
-        <Cards characters={characters} onClose={onClose} />
-      </div>
+
+      <Cards characters={characters} onClose={onClose} />
     </div>
   );
 }

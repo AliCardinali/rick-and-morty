@@ -12,9 +12,9 @@ function SearchBar({ onSearch }) {
       <input
         type="search"
         value={character}
-        onChange={handleCase}
         placeholder="Search..."
         className={style.border}
+        onChange={handleCase}
       />
       <button onClick={() => onSearch(character)} className={style.btn}>
         Add

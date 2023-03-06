@@ -5,18 +5,18 @@ import style from "./Cards.module.css";
 function Cards(characters, onClose) {
   return (
     <div className={style.CardContainer}>
-      {/* {characters.map(({ id, name, species, gender, image }) => {
+      {characters.map((character) => {
         return (
           <Card
-            key={id}
-            name={name}
-            species={species}
-            gender={gender}
-            image={image}
-            onClose={() => onClose(id)}
+            key={character.id}
+            name={character.name}
+            species={character.species}
+            gender={character.gender}
+            image={character.image}
+            onClose={() => onClose(character.id)}
           />
         );
-      })} */}
+      })}
       <h1>esta funcionando</h1>
     </div>
   );
