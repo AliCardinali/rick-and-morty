@@ -1,23 +1,16 @@
 import React from "react";
-import Card from "../Card/Card";
+import Card from "../Card/Card.jsx";
 import style from "./Cards.module.css";
 
-function Cards(characters, onClose) {
+function Cards(props) {
+  const { characters, onClose } = props;
   return (
-    <div className={style.CardContainer}>
-      {characters.map((character) => {
-        return (
-          <Card
-            key={character.id}
-            name={character.name}
-            species={character.species}
-            gender={character.gender}
-            image={character.image}
-            onClose={() => onClose(character.id)}
-          />
-        );
-      })}
-      <h1>esta funcionando</h1>
+    <div>
+      <h2>Este es el componente Cards</h2>
+
+      {characters.map((el) => (
+        <Card key={el.id} name={el.name} image={el.image} />
+      ))}
     </div>
   );
 }

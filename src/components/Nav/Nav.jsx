@@ -1,4 +1,5 @@
-import SearchBar from "./SearchBar/SearchBar.jsx";
+import Cards from "../Cards/Cards.jsx";
+import SearchBar from "../SearchBar/SearchBar.jsx";
 
 const Nav = ({ onSearch }) => {
   return (
