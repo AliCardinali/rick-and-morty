@@ -10,18 +10,10 @@ function Card(props) {
           <button onClick={() => onClose} className={style.btnDelete}>
             X
           </button>
-          <h2>
-            className={style.name}
-            {name}
-          </h2>
-          <h2>
-            className={style.title} {species}
-          </h2>
-          <h2>
-            className={style.title}
-            {gender}
-          </h2>
 
+          <h2 className={style.title}> {name}</h2>
+          <h2 className={style.title}>{species}</h2>
+          <h2 className={style.title}>{gender}</h2>
           <img src={image} alt={name} />
         </div>
       }
