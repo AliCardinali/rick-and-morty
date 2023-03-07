@@ -2,6 +2,7 @@
   border-radius: 5px;
   font-size: 18px;
   width: 40;
+  height: 30px;
 }
 .btn {
   font-size: 18px;
@@ -11,5 +12,5 @@
 }
 
 .margen {
-  margin-right: 80%;
+  margin-left: 80%;
 }
