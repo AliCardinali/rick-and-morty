@@ -5,7 +5,9 @@
 }
 .btn {
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 7px;
+  background-color: palegoldenrod;
+  border: 0.3rem solid transparent;
 }
 
 .margen {

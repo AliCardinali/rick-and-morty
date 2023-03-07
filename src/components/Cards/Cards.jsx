@@ -5,11 +5,16 @@ import style from "./Cards.module.css";
 function Cards(props) {
   const { characters, onClose } = props;
   return (
-    <div>
-      <h2>Este es el componente Cards</h2>
-
+    <div className={style.CarContainer}>
       {characters.map((el) => (
-        <Card key={el.id} name={el.name} image={el.image} />
+        <Card
+          key={el.id}
+          name={el.name}
+          species={el.species}
+          gender={el.gener}
+          image={el.image}
+          onClose={() => onClose(id)}
+        />
       ))}
     </div>
   );

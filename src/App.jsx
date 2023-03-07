@@ -23,9 +23,11 @@ function App() {
   };
   console.log(characters);
   return (
-    <div>
-      <Nav onSearch={onSearch} />
-      <Cards characters={characters} onClose={onClose} />
+    <div className="App BackgroundImage">
+      <div>
+        <Nav onSearch={onSearch} />
+        <Cards characters={characters} onClose={onClose} />
+      </div>
     </div>
   );
 }

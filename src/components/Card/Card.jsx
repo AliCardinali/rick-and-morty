@@ -4,16 +4,23 @@ function Card(props) {
   const { name, species, gender, image, onClose } = props;
   console.log(name, species, gender, image);
   return (
-    <div>
-      <h3>Este es el componente card</h3>
+    <div className={style.container}>
       {
-        <div>
+        <div className={style.back}>
           <button onClick={() => onClose} className={style.btnDelete}>
             X
           </button>
-          <h2>{name}</h2>
-
-          <h2>{gender}</h2>
+          <h2>
+            className={style.name}
+            {name}
+          </h2>
+          <h2>
+            className={style.title} {species}
+          </h2>
+          <h2>
+            className={style.title}
+            {gender}
+          </h2>
 
           <img src={image} alt={name} />
         </div>

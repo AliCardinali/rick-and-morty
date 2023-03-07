@@ -11,6 +11,7 @@ function SearchBar({ onSearch }) {
     <>
       <input
         type="search"
+        value={characterId}
         onChange={handleCase}
         className={style.border}
         placeholder="Search..."
