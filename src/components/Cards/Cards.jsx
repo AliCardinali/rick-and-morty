@@ -11,8 +11,9 @@ function Cards(props) {
           key={el.id}
           name={el.name}
           species={el.species}
-          gender={el.gener}
+          gender={el.gender}
           image={el.image}
+          detailId={el.id}
           onClose={() => onClose(id)}
         />
       ))}

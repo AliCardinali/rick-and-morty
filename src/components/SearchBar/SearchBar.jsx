@@ -7,19 +7,25 @@ function SearchBar({ onSearch }) {
   const handleCase = (event) => {
     setCharacterId(event.target.value);
   };
+
+  const handleReset = () => {
+    setCharacterId("");
+  };
   return (
-    <>
-      <input
-        type="search"
-        value={characterId}
-        onChange={handleCase}
-        className={style.border}
-        placeholder="Search..."
-      />
-      <button onClick={() => onSearch(characterId)} className={style.btn}>
-        Add
-      </button>
-    </>
+    <div className={style.SearchBar}>
+      <>
+        <input
+          type="search"
+          value={characterId}
+          onChange={handleCase}
+          className={style.border}
+          placeholder="Search..."
+        />
+        <button onClick={() => onSearch(characterId)} className={style.btn}>
+          Add
+        </button>
+      </>
+    </div>
   );
 }
 export default SearchBar;

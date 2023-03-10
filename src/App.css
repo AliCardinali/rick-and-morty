@@ -1,8 +1,12 @@
 .App {
-  width: 100vw;
-  height: 100vh;
+  margin: 0%;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0.5px;
+  bottom: -64px;
 }
-.BackgroundImage {
+:root {
   background-image: url("./assets/rick-y-morty2.jpg");
   background-repeat: no-repeat;
   background-position: center;

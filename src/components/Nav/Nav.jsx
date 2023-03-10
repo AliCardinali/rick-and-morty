@@ -1,12 +1,10 @@
-import Cards from "../Cards/Cards.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 
-const Nav = ({ onSearch }) => {
+export default function Nav(props) {
+  const { onSearch } = props;
   return (
     <div>
       <SearchBar onSearch={onSearch} />
     </div>
   );
-};
-
-export default Nav;
+}

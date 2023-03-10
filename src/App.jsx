@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -24,10 +25,15 @@ function App() {
   console.log(characters);
   return (
     <div className="App BackgroundImage">
-      <div>
-        <Nav onSearch={onSearch} />
-        <Cards characters={characters} onClose={onClose} />
-      </div>
+      <Nav onSearch={onSearch} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:detailId" element={<Detail />} />
+      </Routes>
     </div>
   );
 }

@@ -32,8 +32,9 @@ body {
 }
 
 h2 {
-  font-size: 3em;
-  line-height: 0.18;
+  font-size: 2em;
+  line-height: 0.1;
+  writing-mode: horizontal-tb;
 }
 
 button {
