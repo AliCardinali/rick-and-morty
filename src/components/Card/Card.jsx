@@ -11,7 +11,7 @@ function Card(props) {
           <button onClick={() => onClose} className={style.btnDelete}>
             X
           </button>
-          <Link to={`/detail/$(detailId)`}>
+          <Link to={`/detail/${detailId}`}>
             <h2 className={style.title}> {name}</h2>
           </Link>
           <h2 className={style.title}>{gender}</h2>

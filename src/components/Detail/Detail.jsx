@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Component } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function Detail() {
@@ -7,7 +7,7 @@ export default function Detail() {
 
   const navigate = useNavigate();
 
-  const { character, setCharacter } = useState({});
+  const [character, setCharacter] = useState({});
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
       .then((response) => response.json())
@@ -31,7 +31,7 @@ export default function Detail() {
   return (
     <>
       <div>
-        <button onClick={handleClick}>Back to Home</button>
+        <button onClick={handleClick}>Volver</button>
       </div>
       {character ? (
         <div>

@@ -3,6 +3,8 @@ import "./App.css";
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
 import { Routes, Route } from "react-router-dom";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
 
 function App() {
   const [characters, setCharacters] = useState([]);
