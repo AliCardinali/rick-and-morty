@@ -1,5 +1,6 @@
 import { useState, useEffect, Component } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import style from "./Detail.module.css";
 
 export default function Detail() {
   const { detailId } = useParams();
@@ -35,7 +36,7 @@ export default function Detail() {
       </div>
       {character ? (
         <div>
-          <div>
+          <div className={style.character}>
             <h1>{character.name}</h1>
             <h3>{character.status}</h3>
             <h3>{character.specie}</h3>

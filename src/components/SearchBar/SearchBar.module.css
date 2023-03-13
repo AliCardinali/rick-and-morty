@@ -9,6 +9,10 @@
   border-radius: 7px;
   background-color: palegoldenrod;
   border: 0.3rem solid transparent;
+  /* display: grid;
+  justify-content: flex-end;
+  padding: 5px;
+  border: solid; */
 }
 
 .margen {
