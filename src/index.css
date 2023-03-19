@@ -36,6 +36,33 @@ h2 {
   line-height: 0.1;
   writing-mode: horizontal-tb;
 }
+h3 {
+  font-size: 2em;
+  line-height: 0.9;
+  writing-mode: horizontal-tb;
+  color: chartreuse;
+  /* font-family: inherit; */
+  text-align: center;
+  background-origin: padding-box;
+  background-color: #646cff;
+  border-radius: 8px;
+  padding-bottom: 4mp;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  text-shadow: 3px 5px 5px hwb(271 53% 5%);
+}
+h3:hover {
+  border-color: chartreuse;
+}
+
+h4 {
+  font-size: 2em;
+  line-height: 0.9;
+  writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
+  color: chartreuse;
+  background-color: rgba(18, 28, 47, 0.8);
+}
 
 button {
   border-radius: 8px;

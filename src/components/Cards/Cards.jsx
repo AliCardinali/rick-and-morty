@@ -6,17 +6,20 @@ function Cards(props) {
   const { characters, onClose } = props;
   return (
     <div className={style.CardContainer}>
-      {characters.map((el) => (
-        <Card
-          key={el.id}
-          name={el.name}
-          species={el.species}
-          gender={el.gender}
-          image={el.image}
-          detailId={el.id}
-          onClose={() => onClose(id)}
-        />
-      ))}
+      {characters.map(({ id, name, species, gender, image }) => {
+        return (
+          <Card
+            key={id}
+            id={id}
+            name={name}
+            species={species}
+            gender={gender}
+            image={image}
+            detailId={id}
+            onClose={() => onClose(id)}
+          />
+        );
+      })}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav.jsx";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import About from "./components/About/About";
+import Favorites from "./components/Favorites/Favorites.jsx";
 import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form.jsx";
 
@@ -53,6 +54,7 @@ function App() {
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/about" element={<About />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
       </Routes>
     </div>

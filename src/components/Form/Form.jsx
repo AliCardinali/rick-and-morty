@@ -35,7 +35,7 @@ export default function Form(props) {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>UserName:</label>
+          <label style={{ color: "white" }}>UserName:</label>
           <input
             name="username"
             type="text"
@@ -45,7 +45,7 @@ export default function Form(props) {
           <p style={{ color: "red" }}>{errors.username}</p>
         </div>
         <div>
-          <label>Password:</label>
+          <label style={{ color: "white" }}>Password:</label>
           <input
             name="password"
             type="password"
