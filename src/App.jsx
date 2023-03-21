@@ -21,6 +21,13 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
+  const logout = () => {
+    if (access === true) {
+      setAccess(false);
+      navigate("/");
+    }
+  };
+
   function login(userData) {
     if (userData.username === username && userData.password === password) {
       setAccess(true);
@@ -39,11 +46,11 @@ function App() {
         }
       });
   };
-  console.log("Estamos compartiendo");
+  //console.log("Estamos compartiendo");
   const onClose = (id) => {
     setCharacters(characters.filter((character) => character.id !== id));
   };
-  console.log(characters);
+  //console.log(characters);
   return (
     <div className="App BackgroundImage">
       {location.pathname !== "/" && <Nav onSearch={onSearch} />}

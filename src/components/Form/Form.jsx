@@ -2,7 +2,7 @@ import React from "react";
 import { validation } from "./Validation";
 
 export default function Form(props) {
-  console.log(props);
+  // console.log(props);
   const [userData, setUserData] = React.useState({
     username: "",
     password: "",

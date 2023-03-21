@@ -8,9 +8,12 @@ function SearchBar({ onSearch }) {
     setCharacterId(event.target.value);
   };
 
-  const handleReset = () => {
-    setCharacterId("");
+  const handleRandomCharacter = () => {
+    const randomId = Math.floor(Math.random() * 826) + 1;
+    props.onSearch(randomId);
+    setId("");
   };
+
   return (
     <div className={style.SearchBar}>
       <>
@@ -25,6 +28,9 @@ function SearchBar({ onSearch }) {
           Add
         </button>
       </>
+      <button onClick={() => handleRandomCharacter} className={style.btn}>
+        Random
+      </button>
     </div>
   );
 }

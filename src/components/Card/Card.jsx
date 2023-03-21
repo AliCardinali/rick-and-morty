@@ -17,9 +17,17 @@ function Card(props) {
     removeFavorite,
     myFavorites,
   } = props;
-  //console.log(name, species, gender, image);
 
   const [isFav, setIsFav] = useState(false);
+
+  useEffect(() => {
+    myFavorites.forEach((fav) => {
+      if (fav.id === id) {
+        setIsFav(true);
+        //console.log(isFav);
+      }
+    });
+  }, [myFavorites]);
 
   const handleFavorite = () => {
     if (isFav) {
@@ -41,34 +49,38 @@ function Card(props) {
     }
   };
 
-  useEffect(() => {
-    myFavorites.forEach((fav) => {
-      if (fav.id === id) {
-        setIsFav(true);
-      }
-    });
-  }, [myFavorites]);
-
   return (
     <div className={style.container}>
       {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
+        <button
+          onClick={() => {
+            handleFavorite(id);
+          }}
+        >
+          ❤️
+        </button>
       ) : (
-        <button onClick={handleFavorite}>🤍</button>
+        <button
+          onClick={() => {
+            handleFavorite();
+          }}
+        >
+          🤍
+        </button>
       )}
-      {
-        <div className={style.back}>
-          <button onClick={() => onClose} className={style.btnDelete}>
-            X
-          </button>
-          <Link to={`/detail/${detailId}`}>
-            <h2 className={style.title}> {name}</h2>
-          </Link>
+
+      <div className={style.back}>
+        <button onClick={onClose} className={style.btnDelete}>
+          X
+        </button>
+
+        <Link to={`/detail/${detailId}`}>
+          <h2 className={style.title}> {name}</h2>
           <h2 className={style.title}>{gender}</h2>
           <img src={image} alt={name} />
           <h2 className={style.title}>{species}</h2>
-        </div>
-      }
+        </Link>
+      </div>
     </div>
   );
 }
