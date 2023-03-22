@@ -53,7 +53,8 @@ function App() {
   //console.log(characters);
   return (
     <div className="App BackgroundImage">
-      {location.pathname !== "/" && <Nav onSearch={onSearch} />}
+      {location.pathname !== "/" && <Nav onSearch={onSearch} logout={logout} />}
+
       <Routes>
         <Route path="/" element={<Form Login={login} />} />
         <Route

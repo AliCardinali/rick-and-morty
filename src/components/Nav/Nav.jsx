@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import About from "../About/About.jsx";
 
 function Nav(props) {
-  const { onSearch } = props;
+  const handleLogOut = (event) => {
+    event.preventDefault();
+    props.logout();
+  };
+
   return (
     <div>
       <Link to="/">
@@ -19,7 +23,11 @@ function Nav(props) {
         <h3>LOGOUT</h3>
       </Link>
 
-      <SearchBar onSearch={onSearch} />
+      <SearchBar onSearch={(characterID) => props.onSearch(characterID)} />
+
+      <button type="submit" onClick={handleLogOut}>
+        LogOut
+      </button>
     </div>
   );
 }
