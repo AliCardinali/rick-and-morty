@@ -38,14 +38,13 @@ export default function Detail() {
         <div>
           <div className={style.character}>
             <h1>{character.name}</h1>
-            <h3>{character.status}</h3>
-            <h3>{character.specie}</h3>
-            <h3>{character.gender}</h3>
-            <h3>{character.origin?.name}</h3>
-          </div>
-          <div>
+            <h2>{character.status}</h2>
+            <h2>{character.specie}</h2>
+            <h2>{character.origin?.name}</h2>
             <img src={character.image} alt={character.name} />
+            <h2>{character.gender}</h2>
           </div>
+          <div></div>
         </div>
       ) : (
         ""

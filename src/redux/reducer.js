@@ -14,7 +14,6 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case REMOVE_FAVORITE: {
-      console.log("estamos filtrando", action.payload);
       return {
         ...state,
         myFavorites: state.myFavorites.filter(
@@ -32,14 +31,23 @@ const rootReducer = (state = initialState, action) => {
         myFavorites: allCharsFiltered,
       };
 
-    case ORDER:
-      return {
-        ...state,
-        myFavorites:
-          action.payload === "Ascendente"
-            ? state.allCharacters.sort((a, b) => a.id - b.id)
-            : state.allCharacters.sort((a, b) => b.id - a.id),
-      };
+    case ORDER: {
+      if (action.payload === "Ascendente") {
+        return {
+          ...state,
+          myFavorites: state.allCharacters.sort((a, b) => {
+            return a.id - b.id;
+          }),
+        };
+      } else {
+        return {
+          ...state,
+          myFavorites: state.allCharacters.sort((a, b) => {
+            return b.id - a.id;
+          }),
+        };
+      }
+    }
 
     default:
       return { ...state };

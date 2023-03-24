@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import Favorites from "./components/Favorites/Favorites.jsx";
 import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form.jsx";
+import Error404 from "./components/Error404/Error404";
 
 function App() {
   const navigate = useNavigate();
@@ -36,11 +37,14 @@ function App() {
   }
 
   const onSearch = (characterId) => {
+    //console.log(characterId);
     fetch(`https://rickandmortyapi.com/api/character/${characterId}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
-          setCharacters((characters) => [...characters, data]);
+          characters.find((chart) => chart.id === data.id) === undefined
+            ? setCharacters((characters) => [...characters, data])
+            : alert("No se puede mostrar personajes repetidos");
         } else {
           window.alert("No hay personajes con ese ID");
         }
@@ -64,6 +68,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
   );

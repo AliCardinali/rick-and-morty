@@ -5,6 +5,7 @@ import { addFavorite, removeFavorite } from "../../redux/action";
 import { useState, useEffect } from "react";
 
 function Card(props) {
+  console.log(props);
   const {
     id,
     name,

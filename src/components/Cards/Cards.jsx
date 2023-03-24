@@ -3,7 +3,9 @@ import Card from "../Card/Card.jsx";
 import style from "./Cards.module.css";
 
 function Cards(props) {
+  // console.log(props);
   const { characters, onClose } = props;
+
   return (
     <div className={style.CardContainer}>
       {characters.map(({ id, name, species, gender, image }) => {

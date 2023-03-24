@@ -4,15 +4,16 @@ import { orderCards, filterCards } from "../../redux/action";
 
 const Favorites = () => {
   const favorites = useSelector((state) => state.myFavorites);
+  const dispatch = useDispatch();
 
   console.log(favorites);
 
   const handlerOrder = (event) => {
-    useDispatch(orderCards(event.target.value));
+    dispatch(orderCards(event.target.value));
   };
 
   const handlerFilter = (event) => {
-    useDispatch(filterCards(event.target.value));
+    dispatch(filterCards(event.target.value));
   };
 
   return (
@@ -30,7 +31,7 @@ const Favorites = () => {
             Filter By
           </option>
           <option value="Male">Male</option>
-          <option value="Femele">Femele</option>
+          <option value="Female">Female</option>
           <option value="Unknown">Unknown</option>
           <option value="Genderless">Genderless</option>
         </select>
