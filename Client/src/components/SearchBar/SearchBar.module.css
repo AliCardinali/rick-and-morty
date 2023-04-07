@@ -1,0 +1,21 @@
+.border {
+  border-radius: 5px;
+  font-size: 18px;
+  width: 40;
+  height: 30px;
+}
+.btn {
+  font-size: 18px;
+  border-radius: 7px;
+  background-color: palegoldenrod;
+  border: 0.3rem solid transparent;
+
+  /* display: grid;
+  justify-content: flex-end;
+  padding: 5px;
+  border: solid; */
+}
+
+.margen {
+  margin-left: 180%;
+}

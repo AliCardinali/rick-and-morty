@@ -1,0 +1,31 @@
+.title {
+  color: chartreuse;
+  text-align: center;
+  text-shadow: 3px 5px 5px hwb(271 53% 5%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20;
+  align-items: flex-start;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.container {
+  width: 300px;
+  height: 490px;
+  border: 3px solid palegoldenrod;
+  border-radius: 10px;
+  margin-top: 70px;
+  background-color: rgba(18, 28, 47, 0.8);
+}
+
+.btnDelete {
+  margin-left: 90%;
+  border-radius: 7px;
+  background-color: palegoldenrod;
+  border: 0.3rem solid transparent;
+}
+
+.image {
+  border-radius: 100%;
+  margin-block: 100px;
+}
